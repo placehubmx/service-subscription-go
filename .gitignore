@@ -16,3 +16,6 @@
 
 # IDEA files
 /.idea/*
+
+# Environment
+.env
