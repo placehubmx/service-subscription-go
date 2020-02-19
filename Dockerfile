@@ -26,7 +26,7 @@ RUN go mod download
 COPY . .
 
 # Build application
-RUN cd cmd && CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -o ../build/subscription .
+RUN cd cmd/subscription && CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -o ../../build/subscription .
 
 ##### PRODUCTION STAGE CONTAINER
 FROM alpine:latest as prod
